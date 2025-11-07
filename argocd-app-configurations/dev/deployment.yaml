@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: myapp-etech
+  name: vic-deploy
 spec:
   selector:
     matchLabels:
-      app: myapp
-  replicas: 12
+      app: engr
+  replicas: 5
   template:
     metadata:
       labels:
-        app: myapp
+        app: engr
     spec:
       containers:
-      - name: myapp
+      - name: vic-container
         image: rudolphnfor/etechapp
         ports:
         - containerPort: 8080
